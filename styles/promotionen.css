@@ -1,0 +1,281 @@
+/* ===============================
+   ROOT
+================================ */
+
+.promotion-root {
+  background: #000;
+  color: #fff;
+}
+
+/* ===============================
+   HERO
+================================ */
+
+.promotion-hero {
+  height: 90vh;
+  background: url("/images/home-1/promo-26.jpg") center / cover no-repeat;
+  position: relative;
+}
+
+.promotion-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.promotion-hero h1 {
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  letter-spacing: 0.3em;
+  color: #debf64;
+}
+
+.promotion-hero p {
+  margin-top: 20px;
+  color: #ccc;
+}
+
+/* ===============================
+   GRID
+================================ */
+
+.promotion-section {
+  padding: 120px 20px;
+}
+
+.promotion-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  justify-items: center;
+}
+
+/* ===============================
+   CARD
+================================ */
+
+.promo-card {
+  width: 100%;
+  max-width: 450px;
+  background: radial-gradient(
+    ellipse at top,
+    rgba(255, 215, 120, 0.08),
+    rgba(0, 0, 0, 0.95)
+  );
+  border-radius: 22px;
+  border: 1px solid rgba(222, 191, 100, 0.45);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===============================
+   IMAGE
+================================ */
+
+.promo-image-wrap {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+}
+
+.promo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===============================
+   CONTENT
+================================ */
+
+.promo-content {
+  padding: 28px 26px 34px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+}
+
+/* TITLE – GOLD */
+
+.promo-title {
+  font-family: "Garamond", serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #debf64;
+}
+
+/* PRICE – WHITE */
+
+.promo-price {
+  color: #ffffff;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+/* LIST – CENTERED */
+
+.promo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 26px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #debf64;
+  font-size: 0.95rem;
+}
+
+.promo-list li {
+  margin-bottom: 8px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+/* ===============================
+   BUTTON
+================================ */
+
+.promo-btn {
+  margin-top: auto;
+  padding: 12px 32px;
+  border-radius: 999px;
+  background: linear-gradient(
+    135deg,
+    #c9a84e,
+    #fff2b0,
+    #c9a84e
+  );
+  color: #000;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  border: none;
+  text-decoration: none;
+}
+
+/* ===============================
+   FAQ
+================================ */
+
+.promotion-faq {
+  padding: 120px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.promotion-faq h2 {
+  color: #debf64;
+  letter-spacing: 0.2em;
+  margin-bottom: 40px;
+}
+
+/* ===============================
+   MOBILE
+================================ */
+
+@media (max-width: 768px) {
+  .promo-image-wrap {
+    height: 220px;
+  }
+
+  .promo-content {
+    padding: 24px 20px 30px;
+  }
+}
+
+/* ===============================
+   PROMOTION ACCORDION – GRAND LUXURY
+================================ */
+
+.promo-accordion {
+  max-width: 900px;
+  margin: 60px auto 0;
+  padding: 0 20px;
+}
+
+/* ITEM */
+.promo-accordion-item {
+  background: radial-gradient(
+    ellipse at top,
+    rgba(255, 215, 120, 0.06),
+    rgba(0, 0, 0, 0.95)
+  );
+  border: 1px solid rgba(222, 191, 100, 0.35);
+  border-radius: 18px;
+  margin-bottom: 18px;
+  overflow: hidden;
+}
+
+/* ACTIVE STATE */
+.promo-accordion-item.active {
+  border-color: #debf64;
+}
+
+/* HEADER */
+.promo-accordion-header {
+  width: 100%;
+  padding: 22px 26px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: "Garamond", serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #debf64;
+  text-align: left;
+}
+
+/* ICON */
+.promo-accordion-icon {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+/* CONTENT */
+.promo-accordion-content {
+  padding: 0 26px 26px;
+  color: #ccc;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  display: none;
+}
+
+/* OPEN STATE */
+.promo-accordion-item.active .promo-accordion-content {
+  display: block;
+}
+
+/* ===============================
+   MOBILE
+================================ */
+
+@media (max-width: 768px) {
+  .promo-accordion-header {
+    font-size: 0.95rem;
+    padding: 20px 22px;
+  }
+
+  .promo-accordion-content {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,196 @@
+/* ROOT */
+.eventsRoot {
+  min-height: 100vh;
+  background: black;
+  padding: 120px 20px;
+  text-align: center;
+}
+
+/* TITLE */
+.title {
+  color: #c9a24d;
+  letter-spacing: 0.35em;
+  margin-bottom: 60px;
+}
+
+/* TIMELINE */
+.timeline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 60px;
+}
+
+/* DAY BUBBLE */
+.dayBubble {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  border: none;
+  font-size: 1.4rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.6);
+}
+
+.dayBubble:hover {
+  transform: scale(1.1);
+}
+
+/* GOLD KUGEL */
+.gold {
+  background-image: url("/images/home-1/numberback.png");
+  color: #000;
+}
+
+/* DARK KUGEL */
+.dark {
+  background-image: url("/images/home-1/numberback2.png");
+  color: #e6e6e6;
+}
+
+/* ACTIVE */
+.active {
+  transform: scale(1.2);
+}
+
+/* FLYER OVERLAY */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  padding: 12px;
+  background: black;
+  border: 2px solid #c9a24d;
+  border-radius: 16px;
+}
+
+.close {
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #c9a24d;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.eventsIntro {
+  position: fixed;
+  inset: 0;
+  background: black;
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.introInner {
+  text-align: center;
+  line-height: 1;
+}
+
+.introGrand {
+  font-size: clamp(6rem, 18vw, 14rem);
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 0.12em;
+}
+
+.introEvents {
+  margin-top: 1rem;
+  font-size: clamp(4rem, 12vw, 9rem);
+  font-weight: 900;
+  letter-spacing: 0.18em;
+
+  background: linear-gradient(
+    180deg,
+    #fff1b8 0%,
+    #c9a24d 45%,
+    #8f6b1f 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.eventsRoot {
+  background: #000;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.eventsSectionCasino,
+.eventsSectionPoker {
+  position: relative;
+  padding: 160px 0;
+  overflow: hidden;
+}
+
+/* Schwarze Overlay-Schicht */
+.eventsSectionCasino::before,
+.eventsSectionPoker::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.88);
+  z-index: 1;
+}
+
+/* Inhalt über Overlay */
+.eventsSectionCasino > *,
+.eventsSectionPoker > * {
+  position: relative;
+  z-index: 2;
+}
+
+.eventsSectionCasino {
+  background-image: url("/images/home-1/casino-event.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.eventsSectionPoker {
+  background-image: url("/images/home-1/events-poker.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 90px;
+  font-family: "Garamond", serif;
+  font-size: clamp(1.9rem, 3vw, 2.6rem);
+  letter-spacing: 0.22em;
+  color: #d8b866;
+  text-transform: uppercase;
+}
+
+.timelineWrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (max-width: 640px) {
+  .card {
+    transform: scale(0.9);          /* etwas kleiner */
+    max-width: 90vw;                /* mehr Luft links/rechts */
+  }
+}

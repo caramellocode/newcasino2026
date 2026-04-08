@@ -1,0 +1,26 @@
+/* ✨ Goldener Übergang */
+.gold-transition {
+  height: 80px;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1),
+    rgba(222, 191, 100, 0.25),
+    rgba(0, 0, 0, 1)
+  );
+}
+
+/* ✨ WSOP Logo Glow */
+.wsop-logo {
+  max-width: 260px;
+  filter: drop-shadow(0 0 18px rgba(222, 191, 100, 0.6));
+}
+
+/* ✨ Swiper Pagination Gold */
+.swiper-pagination-bullet {
+  background: #debf64 !important;
+  opacity: 0.4;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}

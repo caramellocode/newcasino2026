@@ -1,0 +1,246 @@
+/* ===============================
+   WSOP BASE
+================================ */
+
+.wsop-root {
+  background: #000;
+  color: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ===============================
+   HERO
+================================ */
+
+.wsop-hero {
+  height: 100vh;
+  background: url("/images/home-1/wsop2.jpg") center / cover no-repeat;
+  position: relative;
+}
+
+.wsop-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.wsop-hero h1 {
+  font-size: clamp(3rem, 7vw, 6rem);
+  color: #fff;
+  letter-spacing: 0.1em;
+}
+
+.wsop-hero p {
+  margin-top: 20px;
+  font-size: 1.3rem;
+  color: #d4af37;
+}
+
+/* ===============================
+   COUNTDOWN
+================================ */
+
+.wsop-countdown {
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.wsop-countdown h2 {
+  color: #d4af37;
+  letter-spacing: 0.4em;
+  margin-bottom: 50px;
+}
+
+.countdown-grid {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.count-box {
+  width: 120px;
+  padding: 25px;
+  border: 1px solid #d4af37;
+  border-radius: 14px;
+  background: #111;
+  font-size: 2.5rem;
+  color: #d4af37;
+}
+
+.count-box span {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.75rem;
+  color: #aaa;
+}
+
+/* ===============================
+   SECTIONS
+================================ */
+
+.wsop-section,
+.wsop-schedule,
+.wsop-hotels {
+  padding: 120px 20px;
+  text-align: center;
+}
+
+.wsop-section h3,
+.wsop-schedule h3,
+.wsop-hotels h3 {
+  font-size: 2.4rem;
+  color: #d4af37;
+  margin-bottom: 30px;
+}
+
+.wsop-section p {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+  color: #ccc;
+}
+
+/* ===============================
+   FLYER GRID
+================================ */
+
+.wsop-schedule-images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: 60px auto;
+}
+
+.wsop-schedule-images img {
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+  border: 2px solid #d4af37;
+  border-radius: 18px;
+  background: #000;
+}
+
+/* ===============================
+   BUTTONS
+================================ */
+
+.wsop-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.btn-gold {
+  padding: 16px 34px;
+  border-radius: 40px;
+  background: linear-gradient(135deg, #d4af37, #f5e27a);
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-outline {
+  padding: 16px 34px;
+  border-radius: 40px;
+  border: 2px solid #d4af37;
+  color: #d4af37;
+  text-decoration: none;
+}
+
+/* ===============================
+   MOBILE
+================================ */
+
+@media (max-width: 900px) {
+  .wsop-schedule-images {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .count-box {
+    width: 90px;
+    font-size: 2rem;
+  }
+}
+
+.wsop-intro {
+  will-change: opacity, transform;
+  backface-visibility: hidden;
+}
+
+
+.wsop-info {
+  padding: 120px 0;
+  background: radial-gradient(
+    circle at center,
+    #0a0a0a 0%,
+    #000 70%
+  );
+}
+
+.wsop-info-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 24px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* Badge */
+.wsop-info-badge img {
+  max-width: 520px;
+  width: 100%;
+  display: block;
+}
+
+/* Text */
+.wsop-info-text h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #d4af37;
+  margin-bottom: 24px;
+}
+
+.wsop-info-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #ddd;
+}
+
+.wsop-info-sub {
+  margin-top: 16px;
+  font-weight: 600;
+  color: #bfa24a;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .wsop-info-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .wsop-info-badge img {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .wsop-hero {
+    height: 60vh; /* weniger Höhe = kein unnötiges Cropping */
+    background-image: url("/images/home-1/mobile-wsop.jpg");
+    background-position: center top;
+    background-size: cover;
+  }
+}

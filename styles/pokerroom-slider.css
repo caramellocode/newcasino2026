@@ -1,0 +1,62 @@
+/* ===============================
+   ♠️ POKERROOM SLIDER
+================================ */
+
+.pokerroom-slider-wrapper {
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto 48px;
+}
+
+.pokerroom-slider-track {
+  display: flex;
+  gap: 32px;
+  transition: transform 0.6s cubic-bezier(.4,.2,.2,1);
+  will-change: transform;
+}
+
+.pokerroom-slide {
+  min-width: 300px;
+  max-width: 300px;
+}
+
+/* ===============================
+   NAVIGATION BUTTONS
+================================ */
+
+.pokerroom-slider-nav {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 80px;
+}
+
+.pokerroom-slider-nav button {
+  width: 52px;
+  height: 52px;
+  border-radius: 999px;
+  border: 2px solid #DEBF64;
+  background: radial-gradient(circle, #222, #000);
+  color: #DEBF64;
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+  box-shadow: 0 0 22px rgba(222,191,100,0.45);
+  transition: all 0.25s ease;
+}
+
+.pokerroom-slider-nav button:hover {
+  box-shadow: 0 0 36px rgba(222,191,100,0.9);
+  transform: translateY(-2px);
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 640px) {
+  .pokerroom-slide {
+    min-width: 260px;
+    max-width: 260px;
+  }
+}

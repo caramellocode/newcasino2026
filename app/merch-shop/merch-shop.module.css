@@ -1,0 +1,218 @@
+/* ================= ROOT ================= */
+.root {
+  background: #000;
+  color: #fff;
+}
+
+/* ================= HERO ================= */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(0,0,0,.4), rgba(0,0,0,.9));
+}
+
+.heroContent {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.heroContent h1 {
+  font-size: clamp(3rem, 6vw, 5rem);
+  letter-spacing: .3em;
+  color: #f8ea77;
+}
+
+.heroContent p {
+  margin-top: 1rem;
+  letter-spacing: .15em;
+}
+
+/* ================= BUTTONS ================= */
+.goldBtn {
+  padding: 1rem 2.8rem;
+  border: 1px solid #f8ea77;
+  color: #f8ea77;
+  text-decoration: none;
+  letter-spacing: .2em;
+  transition: .3s;
+  background: transparent;
+}
+
+.goldBtn:hover {
+  background: #f8ea77;
+  color: #000;
+  box-shadow: 0 0 30px rgba(248,234,119,.6);
+}
+
+.secondary {
+  opacity: .7;
+}
+
+.small {
+  padding: .7rem 1.8rem;
+}
+
+.buttonRow {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center; /* 🔥 WICHTIG */
+}
+
+/* ================= FEATURE ================= */
+.feature {
+  padding: 6rem 2rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.productImage {
+  display: flex;
+  justify-content: center;
+}
+
+.productImage img {
+  width: 100%;
+  max-width: 420px;
+  filter: drop-shadow(0 0 35px rgba(248,234,119,.3));
+}
+
+.badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  border: 1px solid #f8ea77;
+  padding: .5rem 1rem;
+  letter-spacing: .2em;
+}
+
+/* ================= SIZE ================= */
+.sizeRow {
+  display: flex;
+  gap: 28px;
+  margin: 2rem 0;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.sizeSelect {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.sizeBox input {
+  display: none;
+}
+
+.sizeBox span {
+  min-width: 52px;
+  height: 48px;
+  border: 1px solid #f8ea77;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  letter-spacing: .15em;
+}
+
+.sizeBox input:checked + span {
+  background: #f8ea77;
+  color: #000;
+}
+
+/* ================= PRICE ================= */
+.price {
+  font-size: 1.4rem;
+  letter-spacing: .18em;
+  color: #f8ea77;
+}
+
+.animatePrice {
+  animation: priceFade .35s ease-out forwards;
+}
+
+@keyframes priceFade {
+  from {
+    opacity: 0;
+    transform: translateX(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ================= GRID ================= */
+.gridSection {
+  padding: 6rem 2rem;
+}
+
+.sectionTitle {
+  text-align: center;
+  letter-spacing: .25em;
+  margin-bottom: 4rem;
+}
+
+.grid {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 3rem;
+}
+
+.card {
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  max-width: 260px;
+  margin: 0 auto 1.5rem;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 900px) {
+  .split {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .productImage img {
+    max-width: 260px;
+  }
+
+  .buttonRow {
+    justify-content: center;
+  }
+}

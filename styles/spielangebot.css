@@ -1,0 +1,129 @@
+/* ===============================
+   🃏 SPIELANGEBOT – FINAL FIX
+================================ */
+
+.spielangebot-title-main {
+  text-align: center;
+  font-family: 'Syncopate', system-ui, sans-serif;
+  letter-spacing: 0.35em;
+  color: #DEBF64;
+  margin-bottom: 4rem;
+}
+
+/* Perspective */
+.spielangebot-perspective {
+  perspective: 1600px;
+  cursor: pointer;
+}
+
+/* Card */
+.spielangebot-card {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  border-radius: 18px;
+  border: 3px solid #DEBF64; /* ✅ Goldrahmen bleibt */
+  overflow: hidden;
+}
+
+/* ================= TITLE (STATIC OVERLAY) ================= */
+
+.spielangebot-title-overlay {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 30;
+  font-family: 'Syncopate', system-ui, sans-serif;
+  letter-spacing: 0.35em;
+  font-size: 0.95rem;
+  color: #DEBF64;
+  pointer-events: none;
+}
+
+/* ================= FLIP ================= */
+
+.spielangebot-inner {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+  transition: transform 0.9s cubic-bezier(.4,.2,.2,1);
+}
+
+.spielangebot-card.is-active .spielangebot-inner {
+  transform: rotateY(180deg);
+}
+
+/* Faces */
+.spielangebot-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+}
+
+/* Front */
+.spielangebot-front {
+  background-size: cover;
+  background-position: center;
+}
+
+.spielangebot-front::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.35),
+    rgba(0,0,0,0.9)
+  );
+}
+
+/* Back */
+.spielangebot-back {
+  transform: rotateY(180deg);
+  background: radial-gradient(circle at top, #111, #000);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Back Text */
+.spielangebot-back .label {
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  color: rgba(255,255,255,0.6);
+}
+
+.spielangebot-back .value {
+  color: #DEBF64;
+  margin-bottom: 16px;
+}
+
+/* Button */
+.spielangebot-button {
+  margin-top: 22px;
+  padding: 12px 32px;
+  border-radius: 999px;
+  background: linear-gradient(
+    to right,
+    #DEBF64,
+    #f7e6a4,
+    #DEBF64
+  );
+  color: #000;
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  box-shadow: 0 0 18px rgba(222,191,100,0.6);
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .spielangebot-card {
+    height: 380px;
+  }
+
+  .spielangebot-title-overlay {
+    font-size: 0.8rem;
+  }
+}

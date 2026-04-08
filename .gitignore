@@ -1,0 +1,17 @@
+/node_modules
+/.next
+/out
+/dist
+/build
+
+.env*
+!.env.example
+
+.DS_Store
+
+*.log
+
+*.mov
+*.MOV
+*.mp4
+*.MP4

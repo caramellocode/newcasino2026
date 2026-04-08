@@ -1,0 +1,184 @@
+/* ===============================
+   GENUSS & SPIEL – BASE
+================================ */
+
+.genussspiel-root {
+  background: #000;
+  color: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* ===============================
+   HERO
+================================ */
+
+.genussspiel-hero {
+  position: relative;
+  height: calc(100vh - 64px); /* Navbar-Höhe */
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+/* Overlay für Lesbarkeit */
+.genussspiel-hero-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px 12vh;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.15) 0%,
+    rgba(0, 0, 0, 0.55) 55%,
+    rgba(0, 0, 0, 0.85) 100%
+  );
+}
+
+/* ===============================
+   HERO TEXT
+================================ */
+
+.genussspiel-hero h1 {
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
+  letter-spacing: 0.28em;
+  font-weight: 600;
+  color: #d4af37;
+}
+
+.genussspiel-hero p {
+  margin-top: 18px;
+  max-width: 640px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* ===============================
+   CONTENT SECTION
+================================ */
+
+.genussspiel-section {
+  padding: 120px 20px;
+}
+
+.genussspiel-section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.genussspiel-section h2 {
+  font-size: 2.4rem;
+  color: #d4af37;
+  letter-spacing: 0.18em;
+  margin-bottom: 32px;
+}
+
+.genussspiel-section p {
+  max-width: 780px;
+  margin: 0 auto;
+  line-height: 1.8;
+  color: #ccc;
+  font-size: 1.05rem;
+}
+
+/* ===============================
+   IMAGE GRID
+================================ */
+
+.genussspiel-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 70px;
+}
+
+.genussspiel-grid img {
+  width: 100%;
+  border-radius: 20px;
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  object-fit: cover;
+}
+
+/* ===============================
+   FORM SECTION
+================================ */
+
+.genussspiel-form {
+  padding: 120px 20px;
+  background: radial-gradient(
+    circle at center,
+    rgba(212, 175, 55, 0.06),
+    rgba(0, 0, 0, 1)
+  );
+}
+
+.genussspiel-form h3 {
+  color: #d4af37;
+  font-size: 2.2rem;
+  letter-spacing: 0.2em;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* ===============================
+   BUTTON
+================================ */
+
+.genussspiel-btn {
+  display: inline-block;
+  margin-top: 32px;
+  padding: 14px 36px;
+  border-radius: 999px;
+  background: linear-gradient(
+    135deg,
+    #c9a84e,
+    #fff2b0,
+    #c9a84e
+  );
+  color: #000;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  text-decoration: none;
+  border: none;
+}
+
+/* ===============================
+   MOBILE
+================================ */
+
+@media (max-width: 900px) {
+  .genussspiel-hero {
+    height: calc(92vh - 64px);
+  }
+
+  .genussspiel-hero-overlay {
+    padding-bottom: 9vh;
+  }
+
+  .genussspiel-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .genussspiel-section {
+    padding: 90px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .genussspiel-hero h1 {
+    letter-spacing: 0.18em;
+  }
+
+  .genussspiel-hero p {
+    font-size: 0.95rem;
+  }
+}

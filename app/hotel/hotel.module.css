@@ -1,0 +1,358 @@
+/* =================================================
+   ROOT / THEME
+================================================= */
+
+.hotel {
+  --gold-main: #c9a24d;
+  --gold-light: #e6c97a;
+  --gold-soft: #d8b866;
+}
+
+/* =================================================
+   HERO ROOT (FLOOR FOUR STYLE)
+================================================= */
+
+.heroRoot {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* =================================================
+   HERO INTRO (GRAND / HOTEL)
+================================================= */
+
+.heroIntro {
+  position: absolute;
+  inset: 0;
+  background: #000;
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.introGrand {
+  font-size: clamp(6rem, 18vw, 14rem);
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #ffffff;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.introHotel {
+  margin-left: 2vw;
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-family: "Garamond", serif;
+  letter-spacing: 0.25em;
+  line-height: 1;
+  white-space: nowrap;
+
+  background: linear-gradient(
+    180deg,
+    #fff1b8 0%,
+    #c9a24d 40%,
+    #a47c2c 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* =================================================
+   HERO SLIDER
+================================================= */
+
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.heroImage {
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.6s ease-in-out;
+  z-index: 0;
+}
+
+.heroImage.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.55),
+    rgba(0, 0, 0, 0.75)
+  );
+  z-index: 2;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 3;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 8vw;
+}
+
+.heroContent h1 {
+  font-family: "Klavika", sans-serif;
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  letter-spacing: 0.04em;
+  color: var(--gold-main);
+}
+
+.heroContent p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: var(--gold-soft);
+}
+
+/* =================================================
+   BOOKING BAR
+================================================= */
+
+.bookingWrapper {
+  position: relative;
+  margin-top: -70px;
+  z-index: 5;
+}
+
+.bookingBar {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+
+  background: #111;
+  border: 1px solid var(--gold-main);
+  border-radius: 14px;
+
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.45);
+}
+
+.bookingBar label {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--gold-main);
+  margin-bottom: 6px;
+}
+
+.bookingBar input,
+.bookingBar select {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #444;
+  padding: 6px 0;
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.bookingBar input:focus,
+.bookingBar select:focus {
+  outline: none;
+  border-color: var(--gold-main);
+}
+
+.bookingBar button {
+  align-self: end;
+  height: 42px;
+  background: var(--gold-main);
+  border: none;
+  border-radius: 8px;
+  color: #000;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.bookingBar button:hover {
+  background: var(--gold-light);
+}
+
+/* =================================================
+   GENERIC SECTIONS
+================================================= */
+
+.section {
+  padding: 120px 0;
+}
+
+.sectionInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.sectionInner h2 {
+  font-family: "Garamond", serif;
+  font-size: 2.6rem;
+  margin-bottom: 16px;
+  color: var(--gold-main);
+}
+
+.sectionInner p {
+  max-width: 720px;
+  margin: 0 auto 60px;
+  color: #cfcfcf;
+  line-height: 1.7;
+}
+
+/* =================================================
+   ROOMS
+================================================= */
+
+.roomGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.roomCard {
+  background: #111;
+  border: 1px solid var(--gold-main);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
+}
+
+.roomCard img {
+  width: 100%;
+  display: block;
+  border-bottom: 1px solid rgba(201, 162, 77, 0.4);
+}
+
+.roomCard h3 {
+  font-family: "Garamond", serif;
+  font-size: 1.4rem;
+  margin: 20px;
+  color: var(--gold-main);
+}
+
+.roomCard p {
+  margin: 0 20px 24px;
+  color: #d6d6d6;
+  font-size: 0.95rem;
+}
+
+/* =================================================
+   SPA
+================================================= */
+
+.spa {
+  background: #0d0d0d;
+  padding: 120px 0;
+}
+
+.spaInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.spaImage img {
+  border-radius: 18px;
+  border: 1px solid var(--gold-main);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+}
+
+.spaContent h2 {
+  font-family: "Garamond", serif;
+  font-size: 2.6rem;
+  margin-bottom: 20px;
+  color: var(--gold-main);
+}
+
+.spaContent p,
+.spaContent li {
+  color: #d0d0d0;
+  line-height: 1.7;
+}
+
+.spaContent ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* =================================================
+   RESPONSIVE
+================================================= */
+
+@media (max-width: 1024px) {
+  .roomGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .spaInner {
+    grid-template-columns: 1fr;
+  }
+
+  .bookingBar {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .bookingBar {
+    grid-template-columns: 1fr;
+  }
+
+  .heroContent {
+    padding-left: 24px;
+  }
+
+  .introHotel {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+
+  .heroIntro {
+    flex-direction: column;
+  }
+  
+}
+
+@media (max-width: 640px) {
+  .heroRoot {
+    min-height: auto;
+  }
+
+  .hero {
+    height: 45vh;      /* perfekt für Mobile */
+  }
+}
+
+@media (max-width: 640px) {
+  .bookingWrapper {
+    margin-top: 20px;      /* 🔽 20px tiefer */
+    padding-left: 20px;    /* ↔ Seitenabstand */
+    padding-right: 20px;
+  }
+
+  .bookingBar {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}

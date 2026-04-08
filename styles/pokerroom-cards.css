@@ -1,0 +1,63 @@
+.poker-card {
+  perspective: 1200px;
+}
+
+.poker-card-inner {
+  position: relative;
+  width: 100%;
+  padding-top: 140%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.poker-card:hover .poker-card-inner {
+  transform: rotateY(180deg);
+}
+
+.poker-card-front,
+.poker-card-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: 18px;
+  border: 4px solid #debf64;
+}
+
+.poker-card-front {
+  background-size: cover;
+  background-position: center;
+}
+
+.poker-card-back {
+  background: black;
+  color: white;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+}
+
+.poker-card-back .phone {
+  font-size: 18px;
+  letter-spacing: 0.2em;
+}
+
+.btn {
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-size: 12px;
+  letter-spacing: 0.25em;
+  text-decoration: none;
+}
+
+.btn.gold {
+  background: linear-gradient(90deg, #c9a84e, #fff2b0, #c9a84e);
+  color: black;
+}
+
+.btn.outline {
+  border: 1px solid #debf64;
+  color: #debf64;
+}

@@ -1,0 +1,89 @@
+.pokerroom-info-section {
+  position: relative;
+  margin-top: 120px;
+  margin-bottom: 120px;
+  padding: 80px 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.pokerroom-info-bg {
+  position: absolute;
+  inset: 0;
+  background-image: url("/images/home-1/eye.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 28px;
+  opacity: 0.9;
+}
+
+.pokerroom-info-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.55) 40%,
+    rgba(0, 0, 0, 0.25) 100%
+  );
+  border-radius: 28px;
+}
+
+/* CONTENT BOX */
+.pokerroom-info-content {
+  position: relative;
+  z-index: 2;
+  max-width: 520px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 22px;
+  padding: 48px 42px;
+  border: 1.5px solid rgba(222, 191, 100, 0.55);
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+}
+
+.pokerroom-info-content .eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.35em;
+  color: #debf64;
+  margin-bottom: 18px;
+}
+
+.pokerroom-info-content h2 {
+  font-size: 32px;
+  line-height: 1.2;
+  margin-bottom: 26px;
+  color: white;
+}
+
+.pokerroom-info-content h2 span {
+  color: #debf64;
+}
+
+.pokerroom-info-content .text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .pokerroom-info-section {
+    padding: 60px 16px;
+  }
+
+  .pokerroom-info-bg,
+  .pokerroom-info-section::after {
+    border-radius: 22px;
+  }
+
+  .pokerroom-info-content {
+    max-width: 100%;
+    padding: 32px 26px;
+  }
+
+  .pokerroom-info-content h2 {
+    font-size: 26px;
+  }
+}
